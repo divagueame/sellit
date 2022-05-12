@@ -1,0 +1,22 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+Car:
+  title: Car
+  description: Beatiful 1973 car. Its yellow
+  price: 12
+
+Laptop:
+  title: Laptop
+  description: I dont need it.
+  price: 1432
+
+
+Screen:
+  title: Screen
+  description: Not working Mac computer. Its red
+  price: 1123
+
+Dog leash:
+  title: Dog leash
+  description: Fine and beatufigul
+  price: 143

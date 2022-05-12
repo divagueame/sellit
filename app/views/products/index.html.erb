@@ -1,0 +1,11 @@
+<div class="bg-green-200 p-8">
+  <h1 class="">Products#index</h1>
+  <% @products.each do |product| %>
+    <%= link_to product_path(product.id) do %>
+    <div class="product p-1 border-lg">
+    <h2><%= product.title %></h2>
+    <h4><%= product.price %></h4>
+    </div>
+    <% end %>
+  <% end %>
+</div>

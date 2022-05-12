@@ -10,12 +10,11 @@ module.exports = {
     './app/javascript/**/*.js',
     './app/views/**/*.{erb,haml,html,slim}'
   ],
+  
   theme: {
     extend: {
       fontFamily: {
         sans: ['Bebas Neue','Radio Canada', ...defaultTheme.fontFamily.sans],
-        // ...fontFamily,
-        // 'sans': ['Canada', ui-sans-serif, 'system-ui', ...],
       },
     },
   },
