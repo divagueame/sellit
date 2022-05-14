@@ -1,0 +1,26 @@
+es:
+  activerecord:
+    models:
+      product: 'Producto'
+    attributes:
+      title: 'Titulo'
+      description: 'Descripcion'
+      price: 'Precio'
+      main_photo: 'Foto Principal'
+  common:
+    confirm: 'Seguro?'
+
+  products:
+    index:
+      title: 'Productos'
+    new:
+      title: 'Nuevo Producto'
+    edit:
+      title: 'Editar producto'
+    create:
+      notice: 'Producto correctamente incluido'
+      alert: 'Error!!'
+    update:
+      notice: 'Producto actualizado'
+    destroyed:
+      notice: 'Producto eliminado'

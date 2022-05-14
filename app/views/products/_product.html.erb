@@ -1,0 +1,7 @@
+    <%= image_tag product.main_photo, width: 120 if product.main_photo.attached? %>
+    <%= link_to product_path(product.id), class:"no-underline text-slate-900" do %>
+    <div class="product p-3 rounded-xl border border-indigo-600 m-2">
+    <h2 class=""><%= product.title %></h2>
+    <h4><%= product.price %></h4>
+    </div>
+    <% end %>
