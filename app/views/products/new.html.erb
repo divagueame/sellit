@@ -2,24 +2,25 @@
 <div>
 
 <%= form_with model: @product do |form| %>
-<% @product.errors.full_messages.each do |error| %> 
-<%= error %>
-<% end %>
-<div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-</div>
-<div>
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-</div>
 
-<div>
-    <%= form.label :price %>
-    <%= form.number_field :price %>
-</div>
-<div>
-    <%= form.submit %>
-</div>
+    <div>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+    <div>
+        <%= form.label :description %>
+        <%= form.text_area :description %>
+    </div>
+
+    <div>
+        <%= form.label :price %>
+        <%= form.number_field :price %>
+    </div>
+    <div>
+        <%= form.submit %>
+    </div>
+    <% @product.errors.full_messages.each do |error| %> 
+        <div class="bg-red-300"><%= error %></div>
+    <% end %>
 <% end %>
 </div>
