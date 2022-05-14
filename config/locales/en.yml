@@ -1,12 +1,23 @@
 en:
   activerecord:
+    errors:
+      models:
+        product:
+          attributes:
+            title: 
+              blank: "Can't be empty"
+            description: 
+              blank: "Can't be empty"
+            price: 
+              blank: "Can't be empty"
     models:
-      product: 'Product'
+      product: Product
     attributes:
-      title: 'Title'
-      description: 'Description'
-      price: 'Price'
-      main_photo: 'Main Pic'
+      product:
+        title: 'EN Title'
+        description: 'Description'
+        price: 'Price'
+        main_photo: 'Main Pic'
   common:
     confirm: Sure?
 

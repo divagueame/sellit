@@ -23,5 +23,12 @@ module Sellit
     config.i18n.available_locales = [:en, :es]
     #language by default
     config.i18n.default_locale = :en
+    config.i18n.default_locale = :es
+
+    # I18n.available_locales = [:en, :es]
+    # I18n.default_locale = :en
+
+
+
   end
 end

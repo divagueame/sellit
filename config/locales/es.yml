@@ -1,12 +1,24 @@
 es:
+
   activerecord:
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: "No puede estar vacio"
+            description: 
+              blank: "No puede estar vacio"
+            price: 
+              blank: "No puede estar vacio"
     models:
-      product: 'Producto'
+      product: Producto
     attributes:
-      title: 'Titulo'
-      description: 'Descripcion'
-      price: 'Precio'
-      main_photo: 'Foto Principal'
+      product:
+        title: 'es Title'
+        description: 'Descripcion'
+        price: 'Precio'
+        main_photo: 'Foto Principal'
   common:
     confirm: 'Seguro?'
 
