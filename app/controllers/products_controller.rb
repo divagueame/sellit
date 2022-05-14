@@ -15,9 +15,9 @@ class ProductsController < ApplicationController
 
     
     if @product.save 
-      redirect_to products_path
+      redirect_to products_path, notice: 'Product added successfully'
     else
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity, alert: 'Error!!'
     end
   end
 
