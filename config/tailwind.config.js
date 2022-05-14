@@ -12,6 +12,9 @@ module.exports = {
   ],
   
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       fontFamily: {
         sans: ['Bebas Neue','Radio Canada', ...defaultTheme.fontFamily.sans],
