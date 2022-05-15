@@ -20,14 +20,12 @@ module Sellit
     # config.eager_load_paths << Rails.root.join("extras")
 
     #available languages
-    config.i18n.available_locales = [:en, :es]
+    # config.i18n.available_locales = [:en, :es]
     #language by default
-    config.i18n.default_locale = :en
-    config.i18n.default_locale = :es
+    # config.i18n.default_locale = :en
 
-    # I18n.available_locales = [:en, :es]
-    # I18n.default_locale = :en
-
+    I18n.available_locales = [:en, :es]
+    I18n.default_locale = :en
 
 
   end

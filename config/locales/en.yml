@@ -18,8 +18,14 @@ en:
         description: 'Description'
         price: 'Price'
         main_photo: 'Main Pic'
+
   common:
     confirm: Sure?
+    back: 'Go back'
+  shared:
+    header:
+      add: 'Add Product'
+      categories: 'Categories'
 
   products:
     index:
@@ -35,3 +41,23 @@ en:
       notice: 'Product Updated!'
     destroy:
       notice: 'Product deleted'
+
+  categories:
+    category:
+      edit: 'Edit'
+      delete: 'Delete'
+    index:
+      title: 'Categories'
+      new: 'Add category'
+    edit:
+      title: 'Edit category'
+    new:
+      title: 'New Category'
+    create:
+      notice: 'Category was successfully created.'
+      alert: 'Category was successfully created.'
+    update:
+      notice: "Category was successfully updated."
+    destroy:
+      notice: "Category was successfully destroyed."
+

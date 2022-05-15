@@ -36,3 +36,16 @@ es:
       notice: 'Producto actualizado'
     destroyed:
       notice: 'Producto eliminado'
+
+  categories:
+    category:
+      edit: 'Edita'
+      delete: 'Borrar'
+    index:
+      title: 'Categorias'
+      new: 'Nueva categoria'
+    edit:
+      title: 'Editar categoria'
+    new:
+      title: 'Nueva Categoria'
+
