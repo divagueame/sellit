@@ -3,9 +3,25 @@ require "test_helper"
 class ProductsControllerTest < ActionDispatch::IntegrationTest
   test 'render a list of products' do 
     get products_path
-
+    
     assert_response :success
     assert_select '.product', 4
+    assert_select '.category', 4
+  end
+
+  test 'renders a list of products filtered by category' do
+    get products_path(category_id: categories(:autos).id)
+
+    assert_response :success
+    assert_select '.product', 1
+  end
+
+  test 'renders a list of products filtered by min and max price' do
+    get products_path(min_price: 100, max_price: 1000)
+
+    assert_response :success
+    assert_select '.product', 1
+    assert_select 'h2', 'Dog leash'
   end
 
   test 'renders show page with details of a product' do

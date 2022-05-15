@@ -26,6 +26,8 @@ es:
     index:
       title: 'Productos'
       all: 'Todos'
+      min_price: 'Precio minimo'
+      max_price: 'Precio maximo'
     new:
       title: 'Nuevo Producto'
     edit:
