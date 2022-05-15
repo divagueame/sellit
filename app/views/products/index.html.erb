@@ -1,5 +1,8 @@
-<div class="bg-green-200 p-8">
-  <h1><%= t('.title') %></h1>
-<%= render partial: 'product', collection: @products %>
-
-</div>
+<%= turbo_frame_tag 'categories' do %> 
+  <div class="bg-green-200 p-8">
+    <h1><%= t('.title') %></h1>
+    <%= link_to t('.all'), products_path %>
+    <%= render partial: 'category', collection: @categories %>
+    <%= render partial: 'product', collection: @products %>
+  </div>
+<% end %>

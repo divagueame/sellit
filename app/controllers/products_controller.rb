@@ -1,7 +1,11 @@
 class ProductsController < ApplicationController
   before_action :product, only: [:show,:edit,:destroy, :update]
   def index
-    @products = Product.all.order(created_at: :desc).with_attached_main_photo
+    @categories = Category.order(name: :asc).load_async
+    @products = Product.all.order(created_at: :desc).with_attached_main_photo.load_async
+    if params[:category_id]
+      @products = @products.where(category_id: params[:category_id])
+    end
   end
   def show
   end
