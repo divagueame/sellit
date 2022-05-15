@@ -25,9 +25,10 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   test 'allow to create a new product' do
     post products_path, params: {
       product: {
-        title: 'Chiki',
-        description: "A good chiki",
-        price: 250
+        title: 'Dog cage',
+        description: "A good chiki cage",
+        price: 250,
+        category_id: categories(:pets).id
       }
     }
 
@@ -75,7 +76,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :unprocessable_entity
   end
 
-  test 'can delete products' do
+  test 'can delete products' do 
     assert_difference('Product.count', -1) do
       delete product_path(products(:Car))
     end

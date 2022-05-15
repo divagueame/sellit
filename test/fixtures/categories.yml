@@ -1,7 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+autos:
+  name: autos
 
-two:
-  name: MyString
+pets:
+  name: pets
+
+electronics:
+  name: electronics
+
+clothes:
+  name: clothes
