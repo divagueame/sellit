@@ -33,6 +33,7 @@ en:
       all: 'All'
       min_price: 'Minimum price'
       max_price: 'Max price'
+      query_text: 'Search...'
     new:
       title: 'New product'
     edit:

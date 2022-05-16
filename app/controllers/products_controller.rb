@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :product, only: [:show,:edit,:destroy, :update]
   def index
+
     @categories = Category.order(name: :asc).load_async
     @products = Product.all.order(created_at: :desc).with_attached_main_photo.load_async
     if params[:category_id]
@@ -11,6 +12,9 @@ class ProductsController < ApplicationController
     end
     if params[:max_price].present?
       @products = @products.where("price <= ?", params[:max_price])
+    end
+    if params[:query_text].present?
+      @products = @products.search_full_text(params[:query_text])
     end
   end
   def show
