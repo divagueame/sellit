@@ -16,7 +16,7 @@
       </div>
       <div>
         <%= form.select :order_by, 
-          options_for_select([['Recientes', 'newest'],['Mas caros','expensive'],['Mas baratos','cheapest']], params[:order_by]),
+          options_for_select(Product::ORDER_BY.keys.map { |order| [t(".#{order}"),order] }, params[:order_by]),
           {},
           { onChange: 'this.form.requestSubmit()'} 
         %> 
@@ -25,7 +25,7 @@
     <% end %>
     <%= link_to t('.all'), products_path %>
     <%= render partial: 'category', collection: @categories %>
-    
+
     <div class="products">
       <%= render partial: 'product', collection: @products %>
     </div>

@@ -29,6 +29,9 @@ es:
       min_price: 'Precio minimo'
       max_price: 'Precio maximo'
       query_text: 'Que quieres buscar...'
+      expensive: 'Mas caro'
+      cheapest: 'Mas barato'
+      newest: 'El mas nuevo'
     new:
       title: 'Nuevo Producto'
     edit:
