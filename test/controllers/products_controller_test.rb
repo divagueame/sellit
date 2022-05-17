@@ -31,6 +31,20 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_select '.product', 1
   end
 
+  test 'orders list of products correctly' do
+    get products_path(order_by: 'cheapest')
+
+    assert_response :success
+    assert_select '.product', 4
+    assert_select '.products a:first-of-type h2', 'Car'
+
+    get products_path(order_by: 'expensive')
+
+    assert_response :success
+    assert_select '.product', 4
+    assert_select '.products a:first-of-type h2', 'Laptop'
+  end
+
   test 'renders show page with details of a product' do
     get product_path(products(:Car))
 
