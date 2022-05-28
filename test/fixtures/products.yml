@@ -1,4 +1,3 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 Car:
   title: Car
@@ -9,7 +8,7 @@ Car:
 Laptop:
   title: Laptop
   description: I dont need it.
-  price: 1432
+  price: 9999432
   category: electronics
 
 Screen:
@@ -23,3 +22,79 @@ Dog leash:
   description: Fine and beatufigul
   price: 143
   category: pets
+
+
+iphone:
+  title: iphone
+  description: 11goodw
+  price: 12324
+  category: electronics
+
+axe:
+  title: axe
+  description: <xzcI dont need it.
+  price: 142
+  category: garden
+
+pos:
+  title: pos
+  description: Not working Mac computer. Its red
+  price: 1123
+  category: garden
+
+violin:
+  title: violin
+  description: Fine daand beatufigul
+  price: 1434
+  category: music
+
+
+bakwin:
+  title: bakwin
+  description: bakwinsfadBeatiful 1973 car. Its yellow
+  price: 12534
+  category: windows
+
+seeoyu:
+  title: seeoyu
+  description: I sdfdont need it.
+  price: 143232
+  category: mirrors
+
+wooden:
+  title: wooden
+  description: woodensdfadsfNot working Mac computer. Its red
+  price: 423
+  category: doors
+
+cleaner:
+  title: cleaner
+  description: Fine and beatufigul
+  price: 1434
+  category: bathroom
+
+
+nife:
+  title: nife
+  description: 11goodw
+  price: 123424
+  category: kitchen
+
+cabinet:
+  title: cabinet
+  description: <xzcI dont need it.
+  price: 142
+  category: furniture
+
+duble:
+  title: duble
+  description: wil speNot working Mac computer. Its red
+  price: 112323
+  category: beds
+
+ace:
+  title: ace
+  description: Poderaa daand beatufigul
+  price: 154
+  category: blankets
+

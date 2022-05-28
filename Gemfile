@@ -9,6 +9,9 @@ gem "rails", "~> 7.0.3"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+# Pagination
+gem "pagy", "~> 5.10"
+
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
@@ -76,4 +79,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
 

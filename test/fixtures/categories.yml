@@ -11,3 +11,42 @@ electronics:
 
 clothes:
   name: clothes
+
+mobile:
+  name: mobile
+
+shirts:
+  name: shirts
+
+garden:
+  name: garden
+
+music:
+  name: music
+
+windows:
+  name: windows
+
+mirrors:
+  name: mirrors
+
+doors:
+  name: doors
+
+bathroom:
+  name: bathroom
+
+kitchen:
+  name: kitchen
+  
+furniture:
+  name: furniture
+
+beds:
+  name: beds
+
+blankets:
+  name: blankets
+
+cards:
+  name: cards
