@@ -1,4 +1,6 @@
 en:
+  app_name: 'Sell it!'
+  meta_title: 'Your chiki chiki Marketplace'
   activerecord:
     errors:
       models:

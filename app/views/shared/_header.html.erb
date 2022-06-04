@@ -1,7 +1,7 @@
 <div class="w-full bg-gray-700 p-1 flex">
 
     <%= link_to products_path do %>
-        <h2 class="inline">Sell_it</h2>
+        <h2 class="inline"><%= t('app_name') %></h2>
     <% end %>
     <%= link_to t('.add'), new_product_path %>
     <%= link_to t('.categories'), categories_path %>

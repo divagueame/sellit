@@ -1,5 +1,6 @@
 es:
-
+  app_name: 'Vendelo'
+  meta_title: 'Compra y vende tu chiki chiki'
   activerecord:
     errors:
       models:
