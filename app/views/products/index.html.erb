@@ -2,7 +2,7 @@
   <div class="bg-green-200 p-8">
     <h1><%= t('.title') %></h1> 
 
-    <%= form_with url: products_path, method: :get do |form| %>
+    <%= form_with url: products_path, class:"flex gap-4", method: :get do |form| %>
       <div>
         <%= form.number_field :min_price, placeholder:  t('.min_price'),
         onChange: 'this.form.requestSubmit()', value: params[:min_price] %>
@@ -23,8 +23,11 @@
       </div>
 
     <% end %>
-    <%= link_to t('.all'), products_path %>
-    <%= render partial: 'category', collection: @categories %>
+    <div class="flex gap-2 py-4 border-l-2 border-indigo-400 px-2 my-2">
+      <%= link_to products_path do %><h3><%= t('.all') %></h3><% end %>
+      <%= render partial: 'category',collection: @categories %>
+    </div>
+
 
   <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %>
       <%= render partial: 'product', collection: @products %>
