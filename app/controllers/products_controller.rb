@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
     # order_in_params = Product::ORDER_BY.fetch(params[:order_by]&.to_sym, Product::ORDER_BY[:newest])
     # @products = @products.order(order_in_params).load_async
       
-    @pagy, @products = pagy_countless(FindProducts.new.call(params).load_async, items: 5)
+    @pagy, @products = pagy_countless(FindProducts.new.call(product_params_index).load_async, items: 5)
   end
 
   def show; end
@@ -54,4 +54,9 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:title, :description, :price, :main_photo, :category_id)
   end
+
+  def product_params_index
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by)
+  end
+
 end
