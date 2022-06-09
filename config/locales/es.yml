@@ -26,6 +26,10 @@ authentication:
   users:
     create:
       created: 'Tu cuenta se ha creado'
+  sessions:
+    create:
+      created: 'Yaestas dentro'
+      failed: 'Login no valido'
   products:
     index:
       title: 'Productos'
