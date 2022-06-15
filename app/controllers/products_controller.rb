@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :product, only: %i[show edit destroy update]
+  skip_before_action :protect_pages, only: [:index, :show]
   def index
     @categories = Category.order(name: :asc).load_async
     # @products = Product.with_attached_main_photo
