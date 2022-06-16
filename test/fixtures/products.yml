@@ -4,97 +4,109 @@ Car:
   description: Beatiful 1973 car. Its yellow
   price: 12
   category: autos
+  user: john
 
 Laptop:
   title: Laptop
   description: I dont need it.
   price: 9999432
   category: electronics
+  user: john
 
 Screen:
   title: Screen
   description: Not working Mac computer. Its red
   price: 1123
   category: electronics
+  user: john
 
 Dog leash:
   title: Dog leash
   description: Fine and beatufigul
   price: 143
   category: pets
-
+  user: john
 
 iphone:
   title: iphone
   description: 11goodw
   price: 12324
   category: electronics
+  user: john
 
 axe:
   title: axe
   description: <xzcI dont need it.
   price: 142
   category: garden
+  user: pepe
 
 pos:
   title: pos
   description: Not working Mac computer. Its red
   price: 1123
   category: garden
+  user: pepe
 
 violin:
   title: violin
   description: Fine daand beatufigul
   price: 1434
   category: music
-
+  user: pepe
 
 bakwin:
   title: bakwin
   description: bakwinsfadBeatiful 1973 car. Its yellow
   price: 12534
   category: windows
+  user: pepe
 
 seeoyu:
   title: seeoyu
   description: I sdfdont need it.
   price: 143232
   category: mirrors
+  user: pepe
 
 wooden:
   title: wooden
   description: woodensdfadsfNot working Mac computer. Its red
   price: 423
   category: doors
+  user: pepe
 
 cleaner:
   title: cleaner
   description: Fine and beatufigul
   price: 1434
   category: bathroom
-
+  user: pepe
 
 nife:
   title: nife
   description: 11goodw
   price: 123424
   category: kitchen
-
+  user: juan
+  
 cabinet:
   title: cabinet
   description: <xzcI dont need it.
   price: 142
   category: furniture
+  user: juan
 
 duble:
   title: duble
   description: wil speNot working Mac computer. Its red
   price: 112323
   category: beds
+  user: juan
 
 ace:
   title: ace
   description: Poderaa daand beatufigul
   price: 154
   category: blankets
-
+  user: juan

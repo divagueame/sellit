@@ -3,7 +3,6 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
   # validates :main_photo, presence: true
-  
   include PgSearch::Model
   pg_search_scope :search_full_text, against: {
     title: 'A',
@@ -16,7 +15,7 @@ class Product < ApplicationRecord
     expensive: 'price DESC',
     cheapest: 'price ASC'
   }
-
-
+  
   belongs_to :category
+  belongs_to :user, default: -> { Current.user }
 end
