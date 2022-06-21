@@ -2,28 +2,33 @@ es:
   app_name: 'Vendelo'
   meta_title: 'Compra y vende tu chiki chiki'
   activerecord:
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: "No puede estar vacio"
-            description: 
-              blank: "No puede estar vacio"
-            price: 
-              blank: "No puede estar vacio"
     models:
       product: Producto
+      user: Usuario
+      category: Categoria
     attributes:
       product:
         title: 'es Title'
         description: 'Descripcion'
         price: 'Precio'
         main_photo: 'Foto Principal'
+      user:
+        email: 'email'
+        username: 'Usuario'
+        password: 'Contrasena'
+      category:
+        name: 'Nombre'
   common:
     confirm: 'Seguro?'
     back: 'Volver'
     not_logged_in: 'You have to log in or create an account'
+  shared:
+    header:
+      add: 'Anadirproducto'
+      categories: 'Categorias'
+      login: 'Acceder'
+      register: 'Registro'
+      logout: 'Desconectar'
 authentication:
   users:
     create:
@@ -32,6 +37,8 @@ authentication:
     create:
       created: 'Yaestas dentro'
       failed: 'Login no valido'
+    destroy:
+      destroyed: 'Session cerrada'
   products:
     index:
       title: 'Productos'

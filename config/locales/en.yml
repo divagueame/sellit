@@ -2,25 +2,22 @@ en:
   app_name: 'Sell it!'
   meta_title: 'Your chiki chiki Marketplace'
   activerecord:
-    errors:
-      models:
-        product:
-          attributes:
-            title: 
-              blank: "Can't be empty"
-            description: 
-              blank: "Can't be empty"
-            price: 
-              blank: "Can't be empty"
     models:
       product: Product
+      user: User
+      category: Category
     attributes:
       product:
         title: 'EN Title'
         description: 'Description'
         price: 'Price'
         main_photo: 'Main Pic'
-
+      user:
+        email: 'email'
+        username: 'Username'
+        password: 'Password'
+      category:
+        name: 'Name'
   common:
     confirm: Sure?
     back: 'Go back'
@@ -29,6 +26,9 @@ en:
     header:
       add: 'Add Product'
       categories: 'Categories'
+      login: 'Login'
+      register: 'Register'
+      logout: 'Log Out'
   authentication:
     users:
       create:
@@ -37,6 +37,8 @@ en:
       create:
         created: 'Your are in!'
         failed: 'Invalid login'
+      destroy:
+        destroyed: 'Session closed'
   products:
     index:
       title: 'Products'
@@ -51,6 +53,8 @@ en:
       title: 'New product'
     edit:
       title:  'Edit this product'
+    show:
+      edit: 'Edit product'
     create:
       notice: 'Product added successfully'
       alert: 'Error!!'
