@@ -1,6 +1,8 @@
 class CategoriesController < ApplicationController
+  before_action :authorize!
 
   def index
+    authorize!
     @categories = Category.all.order(name: :asc)
   end
 
@@ -17,7 +19,7 @@ class CategoriesController < ApplicationController
     if @category.save
       redirect_to categories_url, notice: t('.notice')
     else
-      render :new, status: :unprocessable_entity 
+      render :new, status: :unprocessable_entity
     end 
   end
 

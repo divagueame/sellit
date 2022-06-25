@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   include Pagy::Backend
 
-
   class NotAuthorizedError < StandardError; end
 
   rescue_from NotAuthorizedError do
@@ -30,8 +29,13 @@ class ApplicationController < ActionController::Base
     redirect_to new_session_path, alert: t('common.not_logged_in') unless Current.user
   end
 
-  def authorize! product
-    is_allowed = product.user_id == Current.user.id
+  def authorize! record = nil
+    is_allowed = if record
+      record.user_id == Current.user.id
+    else
+      Current.user.admin?
+    end
+    
     raise NotAuthorizedError unless is_allowed
   end
 
