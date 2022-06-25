@@ -21,7 +21,8 @@ es:
   common:
     confirm: 'Seguro?'
     back: 'Volver'
-    not_logged_in: 'You have to log in or create an account'
+    not_logged_in: 'Tienes que logearte o registrarte'
+    not_authorized: 'Accion no autorizada'
   shared:
     header:
       add: 'Anadirproducto'
