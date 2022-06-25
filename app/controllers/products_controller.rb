@@ -35,6 +35,7 @@ class ProductsController < ApplicationController
   end
 
   def update
+    authorize! product
     if @product.update(product_params)
       redirect_to products_path, notice: t('.notice')
     else
@@ -43,6 +44,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    authorize! product
     @product.destroy
 
     redirect_to products_path, notice: t('.notice'), status: :see_other # code 303 - Redirect to other
