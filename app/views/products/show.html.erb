@@ -4,10 +4,11 @@
         <p class="description"><%= @product.description %></p>
         <h4 class="price"><%= @product.price %>$</h4>
         
-        <%= link_to t('.edit'), edit_product_path(@product) if @product.user == Current.user %>
+        <%= link_to t('.edit'), edit_product_path(@product) if @product.owner? %>
         
         <%= link_to product_path(@product),
                 data: {turbo_confirm: t('common.confirm'), turbo_method: :delete } do %>
                 <h4>Delete</h4>
-        <% end %>
+        <% end if @product.owner? %>
+        <%= @product.user.email %>
 </div>

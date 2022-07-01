@@ -15,7 +15,11 @@ class Product < ApplicationRecord
     expensive: 'price DESC',
     cheapest: 'price ASC'
   }
-  
+
   belongs_to :category
   belongs_to :user, default: -> { Current.user }
+
+  def owner?
+    user_id == Current.user.id if Current.user
+  end
 end
