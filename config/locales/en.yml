@@ -1,6 +1,6 @@
 en:
-  app_name: 'Sell it!'
-  meta_title: 'Your chiki chiki Marketplace'
+  app_name: "Sell it!"
+  meta_title: "Your chiki chiki Marketplace"
   activerecord:
     models:
       product: Product
@@ -8,78 +8,79 @@ en:
       category: Category
     attributes:
       product:
-        title: 'EN Title'
-        description: 'Description'
-        price: 'Price'
-        main_photo: 'Main Pic'
+        title: "EN Title"
+        description: "Description"
+        price: "Price"
+        main_photo: "Main Pic"
       user:
-        email: 'email'
-        username: 'Username'
-        password: 'Password'
+        email: "email"
+        username: "Username"
+        password: "Password"
       category:
-        name: 'Name'
+        name: "Name"
   common:
     confirm: Sure?
-    back: 'Go back'
-    not_logged_in: 'You have to log in or create an account'
-    not_authorized: 'You dont have permission for this action'
+    back: "Go back"
+    not_logged_in: "You have to log in or create an account"
+    not_authorized: "You dont have permission for this action"
+    not_found: "Not found.."
   shared:
     header:
-      add: 'Add Product'
-      categories: 'Categories'
-      login: 'Login'
-      register: 'Register'
-      logout: 'Log Out'
+      add: "Add Product"
+      categories: "Categories"
+      login: "Login"
+      register: "Register"
+      logout: "Log Out"
   authentication:
     users:
       create:
-        created: 'Your account has been created'
+        created: "Your account has been created"
     sessions:
       create:
-        created: 'Your are in!'
-        failed: 'Invalid login'
+        created: "Your are in!"
+        failed: "Invalid login"
       destroy:
-        destroyed: 'Session closed'
+        destroyed: "Session closed"
   products:
     index:
-      title: 'Products'
-      all: 'All'
-      min_price: 'Minimum price'
-      max_price: 'Max price'
-      query_text: 'Search...'
-      expensive: 'Expensive'
-      cheapest: 'Cheapest'
-      newest: 'Recently added'
+      title: "Products"
+      all: "All"
+      min_price: "Minimum price"
+      max_price: "Max price"
+      query_text: "Search..."
+      expensive: "Expensive"
+      cheapest: "Cheapest"
+      newest: "Recently added"
     new:
-      title: 'New product'
+      title: "New product"
     edit:
-      title:  'Edit this product'
+      title: "Edit this product"
     show:
-      edit: 'Edit product'
+      edit: "Edit product"
+      view_more_products: "View more of products of %{username}"
     create:
-      notice: 'Product added successfully'
-      alert: 'Error!!'
+      notice: "Product added successfully"
+      alert: "Error!!"
     update:
-      notice: 'Product Updated!'
+      notice: "Product Updated!"
     destroy:
-      notice: 'Product deleted'
+      notice: "Product deleted"
 
   categories:
     category:
-      edit: 'Edit'
-      delete: 'Delete'
+      edit: "Edit"
+      delete: "Delete"
     index:
-      title: 'Categories'
-      new: 'Add category'
+      title: "Categories"
+      new: "Add category"
     edit:
-      title: 'Edit category'
+      title: "Edit category"
     new:
-      title: 'New Category'
+      title: "New Category"
     create:
-      notice: 'Category was successfully created.'
-      alert: 'Category was successfully created.'
+      notice: "Category was successfully created."
+      alert: "Category was successfully created."
     update:
       notice: "Category was successfully updated."
     destroy:
       notice: "Category was successfully destroyed."
-

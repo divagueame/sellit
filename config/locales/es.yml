@@ -1,6 +1,6 @@
 es:
-  app_name: 'Vendelo'
-  meta_title: 'Compra y vende tu chiki chiki'
+  app_name: "Vendelo"
+  meta_title: "Compra y vende tu chiki chiki"
   activerecord:
     models:
       product: Producto
@@ -8,69 +8,70 @@ es:
       category: Categoria
     attributes:
       product:
-        title: 'es Title'
-        description: 'Descripcion'
-        price: 'Precio'
-        main_photo: 'Foto Principal'
+        title: "es Title"
+        description: "Descripcion"
+        price: "Precio"
+        main_photo: "Foto Principal"
       user:
-        email: 'email'
-        username: 'Usuario'
-        password: 'Contrasena'
+        email: "email"
+        username: "Usuario"
+        password: "Contrasena"
       category:
-        name: 'Nombre'
+        name: "Nombre"
   common:
-    confirm: 'Seguro?'
-    back: 'Volver'
-    not_logged_in: 'Tienes que logearte o registrarte'
-    not_authorized: 'Accion no autorizada'
+    confirm: "Seguro?"
+    back: "Volver"
+    not_logged_in: "Tienes que logearte o registrarte"
+    not_authorized: "Accion no autorizada"
+    not_found: "No se ha encontrado"
   shared:
     header:
-      add: 'Anadirproducto'
-      categories: 'Categorias'
-      login: 'Acceder'
-      register: 'Registro'
-      logout: 'Desconectar'
+      add: "Anadirproducto"
+      categories: "Categorias"
+      login: "Acceder"
+      register: "Registro"
+      logout: "Desconectar"
 authentication:
   users:
     create:
-      created: 'Tu cuenta se ha creado'
+      created: "Tu cuenta se ha creado"
   sessions:
     create:
-      created: 'Yaestas dentro'
-      failed: 'Login no valido'
+      created: "Yaestas dentro"
+      failed: "Login no valido"
     destroy:
-      destroyed: 'Session cerrada'
+      destroyed: "Session cerrada"
   products:
     index:
-      title: 'Productos'
-      all: 'Todos'
-      min_price: 'Precio minimo'
-      max_price: 'Precio maximo'
-      query_text: 'Que quieres buscar...'
-      expensive: 'Mas caro'
-      cheapest: 'Mas barato'
-      newest: 'El mas nuevo'
+      title: "Productos"
+      all: "Todos"
+      min_price: "Precio minimo"
+      max_price: "Precio maximo"
+      query_text: "Que quieres buscar..."
+      expensive: "Mas caro"
+      cheapest: "Mas barato"
+      newest: "El mas nuevo"
     new:
-      title: 'Nuevo Producto'
-    edit:
-      title: 'Editar producto'
+      title: "Nuevo Producto"
+    show:
+      edit: "Edit product"
+      view_more_products: "Ver mas productos de %{username}"
     create:
-      notice: 'Producto correctamente incluido'
-      alert: 'Error!!'
+      notice: "Producto correctamente incluido"
+      alert: "Error!!"
     update:
-      notice: 'Producto actualizado'
+      notice: "Producto actualizado"
     destroyed:
-      notice: 'Producto eliminado'
+      notice: "Producto eliminado"
 
   categories:
     category:
-      edit: 'Edita'
-      delete: 'Borrar'
+      edit: "Edita"
+      delete: "Borrar"
     index:
-      title: 'Categorias'
-      new: 'Nueva categoria'
+      title: "Categorias"
+      new: "Nueva categoria"
     edit:
-      title: 'Editar categoria'
+      title: "Editar categoria"
     new:
-      title: 'Nueva Categoria'
-
+      title: "Nueva Categoria"
