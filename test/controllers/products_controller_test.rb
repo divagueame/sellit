@@ -1,12 +1,12 @@
-require "test_helper"
+require 'test_helper'
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest
   setup do
     login
   end
-  test 'render a list of products' do 
+  test 'render a list of products' do
     get products_path
-    
+
     assert_response :success
     assert_select '.product', 5
     assert_select '.category', 17
@@ -59,14 +59,14 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get new_product_path
 
     assert_response :success
-    assert_select 'form', 1 
+    assert_select 'form', 1
   end
 
   test 'allow to create a new product' do
     post products_path, params: {
       product: {
         title: 'Dog cage',
-        description: "A good chiki cage",
+        description: 'A good chiki cage',
         price: 250,
         category_id: categories(:pets).id
       }
@@ -80,7 +80,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     post products_path, params: {
       product: {
         title: '',
-        description: "A good chiki",
+        description: 'A good chiki',
         price: 250
       }
     }
@@ -92,7 +92,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get edit_product_path(products(:Car))
 
     assert_response :success
-    assert_select 'form', 1 
+    assert_select 'form', 1
   end
 
   test 'allow to update a product' do
@@ -106,7 +106,6 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_equal flash[:notice], 'Product Updated!'
   end
 
-
   test 'does not allow to update a product with invalid field' do
     patch product_path(products(:Car)), params: {
       product: {
@@ -116,7 +115,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :unprocessable_entity
   end
 
-  test 'can delete products' do 
+  test 'can delete products' do
     assert_difference('Product.count', -1) do
       delete product_path(products(:Car))
     end
