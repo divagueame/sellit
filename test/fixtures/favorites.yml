@@ -1,0 +1,7 @@
+john_Car:
+  user: john
+  product: Car
+
+john_Screen:
+  user: john
+  product: Screen
