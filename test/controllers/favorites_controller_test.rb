@@ -8,11 +8,9 @@ class FavoritesControllerTest < ActionDispatch::IntegrationTest
     @favorited_product = products(:Car)
   end
 
-  test 'should create favorite' do
-    assert_difference('Favorite.count', 1) do
-      post favorites_path(product_id: @product.id)
-    end
-    assert_redirected_to product_path(@product)
+  test 'should return my favorites' do
+    get favorites_url
+    assert_response :success
   end
 
   test 'should not create duplicated favorites' do

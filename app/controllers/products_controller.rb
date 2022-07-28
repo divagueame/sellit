@@ -1,16 +1,8 @@
 class ProductsController < ApplicationController
   before_action :product, only: %i[show edit destroy update]
-  skip_before_action :protect_pages, only: [:index, :show]
+  skip_before_action :protect_pages, only: %i[index show]
   def index
     @categories = Category.order(name: :asc).load_async
-    # @products = Product.with_attached_main_photo
-    # @products = @products.where(category_id: params[:category_id]) if params[:category_id]
-    # @products = @products.where('price >= ?', params[:min_price]) if params[:min_price].present?
-    # @products = @products.where('price <= ?', params[:max_price]) if params[:max_price].present?
-    # @products = @products.search_full_text(params[:query_text]) if params[:query_text].present?
-    # order_in_params = Product::ORDER_BY.fetch(params[:order_by]&.to_sym, Product::ORDER_BY[:newest])
-    # @products = @products.order(order_in_params).load_async
-      
     @pagy, @products = pagy_countless(FindProducts.new.call(product_params_index).load_async, items: 5)
   end
 
@@ -61,7 +53,6 @@ class ProductsController < ApplicationController
   end
 
   def product_params_index
-    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page)
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page, :favorites)
   end
-
 end

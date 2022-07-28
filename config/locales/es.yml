@@ -28,6 +28,7 @@ es:
     header:
       add: "Anadirproducto"
       categories: "Categorias"
+      favorites: "Mis favoritos"
       login: "Acceder"
       register: "Registro"
       logout: "Desconectar"
@@ -63,7 +64,6 @@ authentication:
       notice: "Producto actualizado"
     destroyed:
       notice: "Producto eliminado"
-
   categories:
     category:
       edit: "Edita"
@@ -75,3 +75,6 @@ authentication:
       title: "Editar categoria"
     new:
       title: "Nueva Categoria"
+  favorites:
+    index:
+      title: "Mis favoritos"

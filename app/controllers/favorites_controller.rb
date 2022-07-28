@@ -1,4 +1,8 @@
 class FavoritesController < ApplicationController
+  def index
+    # @favorites = Current.user.favorites
+  end
+
   def create
     product.favorite!
     redirect_to product_path(product)
