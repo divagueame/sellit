@@ -10,13 +10,13 @@
     src: url('BebasNeue-Regular.ttf');
   }
   h1 {
-    @apply text-5xl pb-3;
+    @apply text-5xl;
   }
   h2 {
-    @apply text-2xl pb-2;
+    @apply text-2xl;
   }
   h3 {
-    @apply text-lg pb-2;
+    @apply text-lg;
   }
   a {
     @apply text-slate-800 hover:underline;

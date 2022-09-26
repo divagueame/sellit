@@ -15,16 +15,13 @@
 </script>
   </head>
 
-  <body class="">
+  <body class="bg-gray-200">
       <%= render 'shared/flash' %>
-    <%= render 'shared/header' %>
-    <main class="mx-auto bg-slate-100 dark:bg-slate-900">
-      <div class="container">
+      <%= render 'shared/header' %>
+    
+      <div class="lg:container">
         <%= yield %>
       </div>
-    </main>
-
-
 
   </body>
 </html>
