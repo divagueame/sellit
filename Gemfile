@@ -81,3 +81,5 @@ group :test do
 end
 
 
+
+gem "view_component", "~> 2.74"
