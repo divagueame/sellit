@@ -87,3 +87,7 @@ en:
   favorites:
     index:
       title: "My favorites"
+  user_mailer:
+    welcome:
+      subject: "Welcome!"
+      welcome_message: "Hey %{username}! Welcome"

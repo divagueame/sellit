@@ -78,3 +78,7 @@ authentication:
   favorites:
     index:
       title: "Mis favoritos"
+  user_mailer:
+    welcome:
+      subject: "Bienvenido!"
+      welcome_message: "Hey %{username}! Bienvenido a Sellit!"
