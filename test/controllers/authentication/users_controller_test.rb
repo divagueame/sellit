@@ -8,6 +8,11 @@ class Authentication::UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create user" do
+
+    stub_request(:get, "http://ip-api.com/json/127.0.0.0").
+     to_return(status: 200, body: { status: 'fail' }.to_json, headers: {})
+    
+
     assert_difference("User.count") do
       post users_url, params: { user: { email: 'chiki@chiki.com', username: 'chikipun', password: 'testme' } }
     end
