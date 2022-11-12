@@ -1,22 +1,19 @@
-require "test_helper"
+require 'test_helper'
 
 class Authentication::UsersControllerTest < ActionDispatch::IntegrationTest
-
-  test "should get new" do
+  test 'should get new' do
     get new_user_url
     assert_response :success
   end
 
-  test "should create user" do
+  test 'should create user' do
+    stub_request(:get, 'http://ip-api.com/json/127.0.0.1')
+      .to_return(status: 200, body: { status: 'fail' }.to_json, headers: {})
 
-    stub_request(:get, "http://ip-api.com/json/127.0.0.0").
-     to_return(status: 200, body: { status: 'fail' }.to_json, headers: {})
-    
-
-    assert_difference("User.count") do
+    assert_difference('User.count') do
       post users_url, params: { user: { email: 'chiki@chiki.com', username: 'chikipun', password: 'testme' } }
     end
 
     assert_redirected_to products_url
-  end 
+  end
 end

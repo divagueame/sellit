@@ -25,7 +25,7 @@ en:
     not_authorized: "You dont have permission for this action"
     not_found: "Not found.."
   shared:
-    header:
+    items:
       add: "Add Product"
       favorites: "My favorites"
       categories: "Categories"
@@ -91,3 +91,5 @@ en:
     welcome:
       subject: "Welcome!"
       welcome_message: "Hey %{username}! Welcome"
+  category_component:
+    all: "All"
