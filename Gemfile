@@ -86,3 +86,5 @@ end
 
 
 gem "view_component", "~> 2.74"
+
+gem "sidekiq", "~> 7.0"
