@@ -30,6 +30,7 @@ class ProductsController < ApplicationController
   def update
     authorize! product
     if @product.update(product_params)
+      notify_all_users
       redirect_to products_path, notice: t('.notice')
     else
       render :edit, status: :unprocessable_entity
@@ -55,5 +56,15 @@ class ProductsController < ApplicationController
 
   def product_params_index
     params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page, :favorites, :user_id)
+  end
+
+  def notify_all_users
+    ActionCable.server.broadcast(
+      "product_#{product.id}",
+      {
+        action: "updated"
+      }
+    
+    )
   end
 end
