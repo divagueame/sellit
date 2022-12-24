@@ -1,0 +1,7 @@
+<div id='<%= dom_id(product) %>'>
+        <%= image_tag product.main_photo, width: 200 if product.main_photo.attached? %>
+        <h2 class="title"><%= product.title %></h2>
+        <p class="description"><%= product.description %></p>
+        <h4 class="price"><%= product.price %>$</h4>
+ 
+</div>

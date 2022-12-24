@@ -1,9 +1,5 @@
 <div class="container bg-blue-800 text-slate-50 dark:bg-blue-100 dark:text-slate-800 p-10 rounded-sm">
-        <%= image_tag @product.main_photo, width: 200 if @product.main_photo.attached? %>
-        <h2 class="title"><%= @product.title %></h2>
-        <p class="description"><%= @product.description %></p>
-        <h4 class="price"><%= @product.price %>$</h4>
-        
+         <%= render partial: 'products/product_details', locals: { product: @product } %>       
         <%= link_to t('.edit'), edit_product_path(@product) if @product.owner? %>
         
         <%= link_to product_path(@product),
@@ -19,7 +15,7 @@
         <%= render partial: 'favorite', locals: {product: @product } %>
 
 
-        <div data-controller="websocket-product" data-productid="<%= @product.id %>"></div> 
- 
+        <div data-controller="websocket-productremoved" data-productid="<%= @product.id %>"></div> 
+  <%= turbo_stream_from @product %> 
 
 </div>
